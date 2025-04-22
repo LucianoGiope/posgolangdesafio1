@@ -1,0 +1,19 @@
+version: '3'
+services:
+  sqlite:
+    image: hibitdev/sqlite:latest
+    stdin_open: true
+    tty: true
+    container_name: sqlite
+    hostname: sqlite.hibit
+    restart: always
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: goexpert
+      MYSQL_PASSWORD: root
+    ports:
+      - "8191:8191"
+    volumes:
+      - ./01/server/internal/sqlitebd:/db
+    command: ["tail", "-f", "/dev/null"]
