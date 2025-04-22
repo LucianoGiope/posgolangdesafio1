@@ -48,9 +48,9 @@ Ao finalizar, envie o link do repositório para correção.
  Entre na pasta server/cmd
  Execute o comando: go run main.go
 
-## url da consulta
-- Pode ser feita por linha de comando:
-- - curl localhost:8080/cotacao
+## Url da consulta
+- Pode ser feita por meio do comando CURL:
+- - curl {LOCALHOST}:8080/cotacao
 -
 - Pode ser por meio do cliente:
 - - Entre na pasta client/cmd
