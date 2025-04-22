@@ -44,8 +44,17 @@ Ao finalizar, envie o link do repositório para correção.
 ## Criar a tabela no banco
  CREATE TABLE dollarquote(id TEXT PRIMARY KEY, value REAL, createdat TEXT);
 
+## Subir o server
+ Entre na pasta server/cmd
+ Execute o comando: go run main.go
+
 ## url da consulta
-curl localhost:8080/cotacao
+- Pode ser feita por linha de comando:
+- - curl localhost:8080/cotacao
+-
+- Pode ser por meio do cliente:
+- - Entre na pasta client/cmd
+- - Execute o comando: go run main.go
 
 ## Listar a última cotação feita
 curl localhost:8080/listLast
