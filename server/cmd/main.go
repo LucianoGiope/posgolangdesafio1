@@ -71,7 +71,7 @@ func searchDollarQuoteHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	ctxSave, cancelSave := context.WithTimeout(ctxSearch, time.Millisecond*15)
+	ctxSave, cancelSave := context.WithTimeout(ctxSearch, time.Millisecond*10)
 	defer cancelSave()
 
 	fmt.Printf("\n-> Saving for dollar quote in %v.\n", time.Now().Format("02/01/2006 15:04:05"))
